@@ -1,96 +1,172 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サイト一覧ページ</title>
-    <style>
-        /* 全体のスタイル */
-        body {
-            background: linear-gradient(135deg, #f0f8ff, #d4eaff);
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 30px;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        h1 {
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 10px;
-            animation: fadeIn 1s ease-in-out;
-        }
-        p {
-            font-size: 16px;
-            color: #555;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        /* リストのスタイル */
-        .site-list {
-            list-style: none;
-            padding: 0;
-            max-width: 400px;
-            margin: 20px auto;
-        }
-        .site-list li {
-            background: #ffffff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
-            opacity: 0;
-        }
-        .site-list li:hover {
-            transform: scale(1.05);
-        }
-        .site-list a {
-            text-decoration: none;
-            font-size: 18px;
-            color: #008CBA;
-            font-weight: bold;
-            display: block;
-        }
-        .site-list a:hover {
-            color: #005f73;
-        }
-
-        /* アニメーション */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<title>NOPPO FACTORY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="のっぽのホームページ一覧">
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <h1>サイト一覧</h1>
-    <p>以下のリンクからサイトにアクセスできます。</p>
+<div id="container">
 
-    <ul class="site-list">
-        <li><a href="https://data.gonsaku.f5.si" target="_blank">データ認識</a></li>
-        <li><a href="https://speed.gonsaku.f5.si" target="_blank">速度測定</a></li>
-        <li><a href="https://sosuu.gonsaku.f5.si" target="_blank">素数ゲーム</a></li>
-        <li><a href="https://salc.gonsaku.f5.si" target="_blank">計算機</a></li>
-        <li><a href="https://todo.gonsaku.f5.si" target="_blank">ToDo管理</a></li>
-    </ul>
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="NOPPO FACTORY"></a></h1>
+<!--文字サイズ変更ボタン-->
+<div id="f-size">
+<p>文字サイズ</p>
+<ul>
+<li id="f-small"></li>
+<li id="f-large"></li>
+</ul>
+</div>
+</header>
+<!--svg defs-->
+<svg style="display:none">
+<defs>
+<path id="wavePath" d="M0 30 V15 Q30 3 60 15 T120 15 V30z" />
+</defs>
+</svg>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("サイト一覧ページが読み込まれました！");
-            
-            // 順番にリストを表示するアニメーション
-            const listItems = document.querySelectorAll(".site-list li");
-            listItems.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.opacity = "1";
-                    item.style.transform = "translateY(0)";
-                }, index * 300);
-            });
-        });
-    </script>
+<div class="wave1-section-parts">
+
+<!--上の波-->
+<div class="wave-parts wave-top-parts">
+<svg viewBox="0 0 120 28" preserveAspectRatio="none">
+<g class="wave-wrap-parts">
+<use href="#wavePath" x="0"   y="0" />
+<use href="#wavePath" x="120" y="0" />
+</g>
+</svg>
+</div>
+
+<section class="text-parts">
+
+<h2>NOPPO FACTORY</h2>
+
+<div>
+のっぽの制作した様々なホームページの一覧です。<br>
+</div>
+
+</section>
+
+<!--下の波-->
+<div class="wave-parts wave-bottom-parts">
+<svg viewBox="0 0 120 28" preserveAspectRatio="none">
+<g class="wave-wrap-parts">
+<use href="#wavePath" x="0"   y="0" />
+<use href="#wavePath" x="120" y="0" />
+</g>
+</svg>
+</div>
+
+</div>
+<!--/.wave1-section-parts-->
+
+<section>
+
+<h2>ニュース</h2>
+
+<dl class="news4-parts">
+<dt>20XX/00/00<span class="icon-bg1-parts">重要</span></dt>
+<dd>サンプルテキスト</dd>
+<dt>2025/06/18<span class="icon-bg2-parts">サービス</span></dt>
+<dd>サイトを開設しました</dd>
+</dl>
+
+</section>
+
+
+<section>
+
+
+<!--/.list-grid7-parts-->
+
+<h2 class="">サイト一覧</h2>
+
+<div class="list-grid7-parts square">
+
+
+<a href="https://data.gonsaku.f5.si"><div class="list-parts">
+<figure><img src="images/noppo.png" alt=""></figure>
+<h4>データ認識</h4>
+<p>サイトに登録されたデータを設定されたコードを使用して表示できます。<br>             
+</p>
+</div>
+</a>
+
+<a href="https://html.gonsaku.f5.si"><div class="list-parts">
+<figure><img src="images/noppo.png" alt=""></figure>
+<h4>html練習場</h4>
+<p>入力したhtmlコードがどう見えるかをすぐに確認できます。</p>
+</div>
+</a>
+
+<a href="https://speed.gonsaku.f5.si"><div class="list-parts">
+<figure><img src="images/noppo.png" alt=""></figure>
+<h4>速度測定</h4>
+<p>電車などの速度を位置情報を利用して表示します。ホーム画面に追加でアプリのようにできます。</p>
+</div>
+</a>
+
+<a href="https://salc.gonsaku.f5.si"><div class="list-parts">
+<figure><img src="images/noppo.png" alt=""></figure>
+<h4>計算機</h4>
+<p>のっぽオリジナルのシンプルな計算機です。ホーム画面に追加でアプリのようにできます。</p>
+</div>
+</a>
+
+<a href="https://todo.gonsaku.f5.si"><div class="list-parts">
+<figure><img src="images/noppo.png" alt=""></figure>
+<h4>TODO</h4>
+<p>シンプルなTODOサイトです。ホーム画面に追加でアプリのようにできます。</p>
+</div>
+</a>
+
+<a href="https://sosuu.gonsaku.f5.si"><div class="list-parts">
+<figure><img src="images/noppo.png" alt=""></figure>
+<h4>素数ゲーム</h4>
+<p>画面にでてきた数を素数かどうか分けるゲームです。素数は左、それ以外は右にスワイプします。</p>
+</div>
+</a>
+
+</div>
+<!--/.list-grid7-parts-->
+
+</section>
+
+
+
+<!--/#contents-->
+
+<footer>
+<small>Copyright&copy; NOPPO FACTORY All Rights Reserved.</small>
+</footer>
+
+<!--以下の行はテンプレートの著作。削除しないで下さい。-->
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+
+</div>
+<!--/#container-->
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
 
 </body>
 </html>
